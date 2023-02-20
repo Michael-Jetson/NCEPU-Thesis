@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{NCEPUthesis}[2023/10/01 v1.0 LaTeX document class]
-\LoadClass{article}
+\LoadClass[a4paper]{article}
 
 \RequirePackage[UTF8]{ctex}
 \RequirePackage{graphicx}
@@ -51,6 +51,11 @@
 \newcommand{\NCEPUentitle}[1]{\def\ncepu@en@title{#1}}
 \newcommand{\enfont}{\fontspec{Times New Roman}}
 \newcommand\dlmu[2][4cm]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
+\newcommand{\NCEPUdate}[1]{
+\begin{table}[b]
+\centering \zihao{3}{#1}
+\end{table}
+}
 
 \newcommand{\NCEPUcover}{
 	\makeLogo%打印logo
@@ -73,7 +78,9 @@
 			&\makebox[4em][s]{院系} \hspace{0.5cm}\dlmu[5.5cm]{\ncepu@department} \\
 			&\makebox[4em][s]{专业班级}	\hspace{0.5cm}\dlmu[5.5cm]{\ncepu@class}\\
 		\end{tabular}
+  \NCEPUdate{2023年6月}
 	\end{center}
+    
 	\thispagestyle{empty}
 }
 \newcommand{\NCEPUabstract}{
@@ -85,7 +92,7 @@
 		\heiti \zihao{-2}
 		摘要
     \end{center}}
-\newenvironment{NCEPUabstracttext}{\songti \zihao{-4}   \setlength{\baselineskip}{20pt} \linespread{1} \setlength{\parskip}{4pt}}{\\}
+\newenvironment{NCEPUabstracttext}{\songti \zihao{-4}   \setlength{\baselineskip}{20pt} \linespread{1} \setlength{\parskip}{0pt}}{\\}
 
 \newcommand{\NCEPUkeywords}[1]{\noindent
 {\heiti \zihao{4}关键词：}{\songti \zihao{-4}#1}\setcounter{page}{1}}
@@ -108,6 +115,7 @@
 \newcommand{\NCEPUsubsection}[1]{\heiti \zihao{-3}{\subsection{#1}}}
 \newcommand{\NCEPUsubsubsection}[1]{\heiti \zihao{4}{\subsubsection{#1}}}
 \newcommand{\NCEPUhead}[1]{
-\pagestyle{fancy}
+\pagestyle{fancy}%用来设置页眉页脚
 \fancyhf{}
-\chead{#1}}
+\chead{#1}
+\cfoot{\thepage}}
