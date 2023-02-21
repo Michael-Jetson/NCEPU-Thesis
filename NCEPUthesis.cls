@@ -109,9 +109,9 @@
 \newcommand{\NCEPUenkeywords}[1]{\\ {\zihao{4}\enfont{KeyWords:}}{\zihao{-4}\enfont{#1}}\newpage}
 
 \newcommand{\NCEPUsection}[1]
-{\begin{center}
-    \heiti \zihao{-2}{\section{#1}}
-\end{center}}
+{
+    {\centering{\heiti \zihao{-2}{\section{#1}}}}
+}
 \newcommand{\NCEPUsubsection}[1]{\heiti \zihao{-3}{\subsection{#1}}}
 \newcommand{\NCEPUsubsubsection}[1]{\heiti \zihao{4}{\subsubsection{#1}}}
 \newcommand{\NCEPUhead}[1]{
