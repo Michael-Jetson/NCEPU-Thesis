@@ -16,7 +16,7 @@
 \RequirePackage{setspace}%用于设置行间距等
 \usepackage{fontspec}%引入英文字体
 \usepackage{fancyhdr}%自定义页眉页脚
-
+\usepackage{cite}
 
 \def\ncepu@logo@scale{}%logo放缩
 \def\ncepu@logo@file{}%logo文件名
@@ -92,7 +92,7 @@
 		\heiti \zihao{-2}
 		摘要
     \end{center}}
-\newenvironment{NCEPUabstracttext}{\songti \zihao{-4}   \setlength{\baselineskip}{20pt} \linespread{1} \setlength{\parskip}{0pt}}{\\}
+\newenvironment{NCEPUabstracttext}{\songti \zihao{-4}   \setlength{\baselineskip}{20pt} \linespread{1} \setlength{\parskip}{4pt}}{\\}
 
 \newcommand{\NCEPUkeywords}[1]{\noindent
 {\heiti \zihao{4}关键词：}{\songti \zihao{-4}#1}\setcounter{page}{1}}
@@ -106,16 +106,39 @@
 		{\zihao{-2}\enfont{Abstract}}
     \end{center}
     \setmainfont{Times New Roman} \zihao{-4} \linespread{1.5}}{\\}
-\newcommand{\NCEPUenkeywords}[1]{\\ {\zihao{4}\enfont{KeyWords:}}{\zihao{-4}\enfont{#1}}\newpage}
+\newcommand{\NCEPUenkeywords}[1]
+{
+	\\
+	{\zihao{4}\enfont{KeyWords:}}
+	{\zihao{-4}\enfont{#1}}
+	\newpage
+}
 
 \newcommand{\NCEPUsection}[1]
 {
-    {\centering{\heiti \zihao{-2}{\section{#1}}}}
+    {
+    	\centering
+    	{
+    		\heiti \zihao{-2}{\section{#1}}
+    	}
+    }
 }
-\newcommand{\NCEPUsubsection}[1]{\heiti \zihao{-3}{\subsection{#1}}}
-\newcommand{\NCEPUsubsubsection}[1]{\heiti \zihao{4}{\subsubsection{#1}}}
-\newcommand{\NCEPUhead}[1]{
-\pagestyle{fancy}%用来设置页眉页脚
-\fancyhf{}
-\chead{#1}
-\cfoot{\thepage}}
+\newcommand{\NCEPUsubsection}[1]
+{
+	{
+		\heiti \zihao{-3}{\subsection{#1}}
+	}
+}
+\newcommand{\NCEPUsubsubsection}[1]
+{
+	{\heiti \zihao{4}
+		{\subsubsection{#1}}
+	}
+}
+\newcommand{\NCEPUhead}[1]
+{
+	\pagestyle{fancy}%用来设置页眉页脚
+	\fancyhf{}%清空已有样式
+	\chead{#1}
+	\cfoot{\thepage}%页脚中间输出页码
+}
