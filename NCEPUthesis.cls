@@ -92,10 +92,23 @@
 		\heiti \zihao{-2}
 		摘要
     \end{center}}
-\newenvironment{NCEPUabstracttext}{\songti \zihao{-4}   \setlength{\baselineskip}{20pt} \linespread{1} \setlength{\parskip}{4pt}}{\\}
+\newenvironment{NCEPUabstracttext}
+{
+	\songti 
+	\zihao{-4}   
+	\setlength{\baselineskip}{20pt} 
+	\linespread{1} 
+	\setlength{\parskip}{4pt}
+}
+{\\}
 
-\newcommand{\NCEPUkeywords}[1]{\noindent
-{\heiti \zihao{4}关键词：}{\songti \zihao{-4}#1}\setcounter{page}{1}}
+\newcommand{\NCEPUkeywords}[1]
+{
+	\noindent
+	{\heiti \zihao{4}关键词：}
+	{\songti \zihao{-4}#1}
+	\setcounter{page}{1}
+}
 
 \newenvironment{NCEPUenabstract}{
     \newpage
