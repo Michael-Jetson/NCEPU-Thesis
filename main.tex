@@ -11,53 +11,46 @@
 
 \titleFontSize{1}%设置标题字体，想设置几号字体则输入几号，如想使用一号字体则输入1，若想使用小一号则输入-1，小二号输入-2，0表示初号
 
-\NCEPUtitle{RoboMaster机器人\\视觉打击与控制技术研究}%修改为你的论文题目
+\NCEPUtitle{在这里书写毕设标题\\可换行}%修改为你的论文题目
 
-\name{虢鹏飞}%将这些里面的内容修改为你自己的
+\name{学生}%将这些里面的内容修改为你自己的
 
-\teacher{牛杭}
+\teacher{XX老师}
 
 \degreetype{工学学士}
 
-\department{自动化系}
+\department{XX系}
 
-\class{测控1903}
+\class{电气19XX}
 \NCEPUcover%输出封面
 \newpage
 \NCEPUabstract
 
 \begin{NCEPUabstracttext}
-	RoboMaster机甲大师竞赛（以下简称RM或机甲大师）是一个面向青年工程师的技术比赛，竞赛要求参赛者自主打造机器人并且搭配人工智能技术进行对抗，具备极高的技术要求，可以很好的培养大学生的技术水平与工程能力，本论文以RM为背景，研究机器人的视觉打击与多种控制技术。
-
-	我们首先研究机器人的运动形式，并且根据运动学给出相应公式，然后使用基于深度学习的计算机视觉方法进行目标检测与语义分割，同时使用视觉-激光SLAM进行环境感知，采用强化学习与路径规划方法完成自主决策与导航。
+	在这里填写你的毕设摘要，在此处书写摘要，可自动设置为宋体小四号字体，并且设置行距为20磅，如果你想另起一行并且使用首行缩进，请在源代码中额外空一行，就会显示为首行缩进的情况
+	
+	比如这样\footnote{这是一个脚注}
+	
+	或者这样
+	
+	\LaTeX{}是一个很好用的排版系统，具备比Word更强大的排版能力，基本上Word可以做的\LaTeX{}都可以完成甚至做的更好，而且在有论文模板的情况下（比如说此项目），\LaTeX{}比Word更为编辑，因为在Word模板里面，你要进行各种格式修改才可以让论文符合标准，但是在\LaTeX{}里面，你直接将文本复制粘贴到模板相应位置即可生成满足格式需求的毕设论文
 \end{NCEPUabstracttext}
 
 \NCEPUkeywords{机器人，计算机视觉，机器学习，深度学习，路径规划，SLAM，强化学习}%在这里填写你的关键词
 \NCEPUentitle{Your English Title}%设置你的英文标题
 \begin{NCEPUenabstract}%在下面写你的英文摘要
-RoboMaster Robot Master Competition (hereinafter referred to as RM or Robot Master) is a technical competition for young engineers. The competition requires the contestants to build robots independently and cooperate with artificial intelligence technology to fight against each other. It has extremely high technical requirements, which can well cultivate the technical level and engineering ability of college students. This paper takes RM as the background to study the visual strike and various control technologies of robots.
-
-We first study the motion form of the robot, and give the corresponding formula according to the kinematics. Then we use the computer vision method based on deep learning for object detection and semantic segmentation. At the same time, we use vision-laser SLAM for environment perception, and use reinforcement learning and path planning methods to complete autonomous decision-making and navigation.
+	You can write you English abstract in there,and LaTeX will make it beautiful,you will don't worry with it
 \end{NCEPUenabstract}
 \NCEPUenkeywords{Robot, Computer vision, Machine learning, Deep learning, Path planning, SLAM, Reinforcement learning}%英文关键字
 \tableofcontents%这里可以自动生成目录
 \newpage
 \NCEPUhead{华北电力大学本科毕业设计(论文)}%设置页眉，你也可以替换为自己的论文标题
-\NCEPUsection{概述}
-
-\NCEPUsection{机器人动力学模型}
-\NCEPUsubsection{符号列表}
-我们先在本节定义\cite{liScutSlam}
-\NCEPUsubsection{无人车动力学模型}
-\NCEPUsubsection{无人机动力学模型}
-\NCEPUsection{统计机器学习、深度学习模型及应用}
+\NCEPUsection{一级标题}
+\NCEPUsubsection{二级标题}
+\NCEPUsubsection{使用这个命令可以生成二级标题并且自动编号}
+\NCEPUsubsubsection{使用这个命令可以生成三级标题并且自动编号}
 \newpage%使用这个命令创建新的一页
-\NCEPUsection{计算机视觉}
-
-\NCEPUsection{SLAM技术及应用}
-\NCEPUsection{路径规划算法与应用}
-\NCEPUsection{强化学习与机器人决策}
+\NCEPUsection{使用这个命令可以生成一级居中标题并且自动编号}
 \bibliographystyle{unsrt}
 \bibliography{lib.bib}
 \end{document}
-
