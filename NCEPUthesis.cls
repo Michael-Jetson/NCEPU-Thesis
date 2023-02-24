@@ -129,6 +129,7 @@
 
 \newcommand{\NCEPUsection}[1]
 {
+	\newpage
     {
     	\centering
     	{
