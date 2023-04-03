@@ -52,23 +52,23 @@
 \newcommand{\enfont}{\fontspec{Times New Roman}}
 \newcommand\dlmu[2][4cm]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
 \newcommand{\NCEPUdate}[1]{
-\begin{table}[b]
-\centering \zihao{3}{#1}
-\end{table}
+	\begin{table}[b]
+		\centering \zihao{3}{#1}
+	\end{table}
 }
 
-\newcommand{\NCEPUcover}{
+\newcommand{\NCEPUcover}[1]{
 	\makeLogo%打印logo
 	\begin{center}
 		\zihao{0}
-		\textbf{本科毕业设计}
+		\textbf{#1}
 	\end{center}
 	\vspace{\ncepu@distance@logo@title}
 	\begin{center}
 		\zihao{\ncepu@title@font@size}
 		\ncepu@title
 	\end{center}
-	\vspace{1cm}
+	\vspace{2cm}
 	\begin{center}
 		\zihao{2}
 		\begin{tabular}{rl}
@@ -78,9 +78,8 @@
 			&\makebox[4em][s]{院系} \hspace{0.5cm}\dlmu[5.5cm]{\ncepu@department} \\
 			&\makebox[4em][s]{专业班级}	\hspace{0.5cm}\dlmu[5.5cm]{\ncepu@class}\\
 		\end{tabular}
-  \NCEPUdate{2023年6月}
+		\NCEPUdate{2023年6月}
 	\end{center}
-    
 	\thispagestyle{empty}
 }
 \newcommand{\NCEPUabstract}{
@@ -91,34 +90,21 @@
 	\begin{center}
 		\heiti \zihao{-2}
 		摘要
-    \end{center}}
-\newenvironment{NCEPUabstracttext}
-{
-	\songti 
-	\zihao{-4}   
-	\setlength{\baselineskip}{20pt} 
-	\linespread{1} 
-	\setlength{\parskip}{4pt}
-}
-{\\}
+\end{center}}
+\newenvironment{NCEPUabstracttext}{\songti \zihao{-4}   \setlength{\baselineskip}{20pt} \linespread{1} \setlength{\parskip}{4pt}}{\\}
 
-\newcommand{\NCEPUkeywords}[1]
-{
-	\noindent
-	{\heiti \zihao{4}关键词：}
-	{\songti \zihao{-4}#1}
-	\setcounter{page}{1}
-}
+\newcommand{\NCEPUkeywords}[1]{\noindent
+	{\heiti \zihao{4}关键词：}{\songti \zihao{-4}#1}\setcounter{page}{1}}
 
 \newenvironment{NCEPUenabstract}{
-    \newpage
+	\newpage
 	\begin{center}
-        {\zihao{-1}\enfont{\ncepu@en@title}}
+		{\zihao{-1}\enfont{\ncepu@en@title}}
 	\end{center}
 	\begin{center}
 		{\zihao{-2}\enfont{Abstract}}
-    \end{center}
-    \setmainfont{Times New Roman} \zihao{-4} \linespread{1.5}}{\\}
+	\end{center}
+	\setmainfont{Times New Roman} \zihao{-4} \linespread{1.5}}{\\}
 \newcommand{\NCEPUenkeywords}[1]
 {
 	\\
@@ -129,13 +115,12 @@
 
 \newcommand{\NCEPUsection}[1]
 {
-	\newpage
-    {
-    	\centering
-    	{
-    		\heiti \zihao{-2}{\section{#1}}
-    	}
-    }
+	{
+		\centering
+		{
+			\heiti \zihao{-2}{\section{#1}}
+		}
+	}
 }
 \newcommand{\NCEPUsubsection}[1]
 {
