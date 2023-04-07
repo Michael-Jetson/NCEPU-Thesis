@@ -115,9 +115,10 @@
 
 \newcommand{\NCEPUsection}[1]
 {
-	\begin{center}
+	{
+		\centering
 		\heiti \zihao{-2}{\section{#1}}
-	\end{center}
+	}
 
 }
 \newcommand{\NCEPUsubsection}[1]
