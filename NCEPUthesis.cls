@@ -16,7 +16,7 @@
 \RequirePackage{setspace}%用于设置行间距等
 \usepackage{fontspec}%引入英文字体
 \usepackage{fancyhdr}%自定义页眉页脚
-\usepackage{cite}
+
 
 \def\ncepu@logo@scale{}%logo放缩
 \def\ncepu@logo@file{}%logo文件名
@@ -115,12 +115,10 @@
 
 \newcommand{\NCEPUsection}[1]
 {
-	{
-		\centering
-		{
-			\heiti \zihao{-2}{\section{#1}}
-		}
-	}
+	\begin{center}
+		\heiti \zihao{-2}{\section{#1}}
+	\end{center}
+
 }
 \newcommand{\NCEPUsubsection}[1]
 {
