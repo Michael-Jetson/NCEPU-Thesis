@@ -78,7 +78,7 @@
 			&\makebox[4em][s]{院系} \hspace{0.5cm}\dlmu[5.5cm]{\ncepu@department} \\
 			&\makebox[4em][s]{专业班级}	\hspace{0.5cm}\dlmu[5.5cm]{\ncepu@class}\\
 		\end{tabular}
-		\NCEPUdate{2023年6月}
+		\NCEPUdate{2023年4月7日}
 	\end{center}
 	\thispagestyle{empty}
 }
@@ -116,8 +116,8 @@
 \newcommand{\NCEPUsection}[1]
 {
 	{
-		\centering
-		\heiti \zihao{-2}{\section{#1}}
+		\centering	\heiti \zihao{-2}{\section{#1}}
+		
 	}
 
 }
