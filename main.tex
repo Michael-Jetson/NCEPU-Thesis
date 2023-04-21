@@ -5,7 +5,7 @@
 
 \LogoScale{0.6}%设置图片缩放比，1为原比例，过大则放不下
 
-\LogoFile{logo_2x.png}%图片名称，需要写完整并且保证在同一个目录下
+\LogoFile{logo.png}%图片名称，需要写完整并且保证在同一个目录下
 
 \distanceLogoTitle{2cm}%设置logo和标题之间的距离
 
@@ -22,7 +22,8 @@
 \department{XX系}
 
 \class{电气19XX}
-\NCEPUcover%输出封面
+\NCEPUdate{2023年6月}
+\NCEPUcover{大标题：本科毕设}%输出封面，可以设置方面大标题
 \newpage
 \NCEPUabstract
 
@@ -51,6 +52,7 @@
 \NCEPUsubsubsection{使用这个命令可以生成三级标题并且自动编号}
 \newpage%使用这个命令创建新的一页
 \NCEPUsection{使用这个命令可以生成一级居中标题并且自动编号}
+。
 \bibliographystyle{unsrt}
 \bibliography{lib.bib}
 \end{document}

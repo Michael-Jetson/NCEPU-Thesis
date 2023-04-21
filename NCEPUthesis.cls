@@ -30,9 +30,10 @@
 \def\ncepu@title@font@size{}%设置标题字体大小
 \def\ncepu@title{}%论文标题
 \def\ncepu@abstract@text{}%摘要内容
-
+\def\ncepu@date{}%封面日期
 \def\ncepu@en@title{}%英文标题
 
+%\newcommand{\NCEPUdate}[1]{\def\ncepu@date{#1}}
 \newcommand{\LogoScale}[1]{\def\ncepu@logo@scale{#1}}
 \newcommand{\LogoFile}[1]{\def\ncepu@logo@file{#1}}
 \newcommand{\makeLogo}{
@@ -78,7 +79,7 @@
 			&\makebox[4em][s]{院系} \hspace{0.5cm}\dlmu[5.5cm]{\ncepu@department} \\
 			&\makebox[4em][s]{专业班级}	\hspace{0.5cm}\dlmu[5.5cm]{\ncepu@class}\\
 		\end{tabular}
-		\NCEPUdate{2023年4月7日}
+		\NCEPUdate{\ncepu@date}
 	\end{center}
 	\thispagestyle{empty}
 }
